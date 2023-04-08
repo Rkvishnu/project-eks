@@ -11,8 +11,8 @@ pipeline {
             steps {
                 script {
                     dir('terraform') {
-                        sh "terraform init --migrate-state"
-                        sh "terraform apply -auto-approve"
+                        sh "terraform init"
+                        sh "terraform apply --auto-approve"
                     }
                 }
             }
